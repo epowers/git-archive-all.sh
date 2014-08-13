@@ -177,7 +177,7 @@ if [ ! -z "$1" ]; then
 fi
 
 # Validate parameters; error early, error often.
-if [ $SEPARATE -eq 1 -a ! -d $OUT_FILE ]; then
+if [ $SEPARATE -eq 1 -a ! -d "$OUT_FILE" ]; then
     echo "When creating multiple archives, your destination must be a directory."
     echo "If it's not, you risk being surprised when your files are overwritten."
     exit
